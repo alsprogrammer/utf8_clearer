@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from utf8clearer.cleaners import Clearer
+from string_cleaner.cleaners import Cleaner
 from io import RawIOBase
 
 
@@ -10,7 +10,7 @@ class Processor(ABC):
 
 
 class StreamProcessor(Processor):
-    def __init__(self, clearer: Clearer):
+    def __init__(self, clearer: Cleaner):
         self._clearer = clearer
 
     def __call__(self, source: RawIOBase, destination: RawIOBase):

@@ -1,9 +1,9 @@
 import string
-from utf8clearer.cleaners import StringClearer
-from utf8clearer.processors import StreamProcessor
+from string_cleaner.cleaners import StringCleaner
+from string_cleaner.processors import StreamProcessor
 
 if __name__ == "__main__":
-    clearer = StringClearer(string.printable)
+    clearer = StringCleaner(string.printable)
 
     print(clearer("Hooray!"))
 

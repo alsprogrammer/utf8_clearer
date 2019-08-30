@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 
 
-class Clearer(ABC):
+class Cleaner(ABC):
     @abstractmethod
     def __call__(self, object_to_clear):
         pass
 
 
-class StringClearer(Clearer):
+class StringCleaner(Cleaner):
     def __init__(self, allowed_chars: str):
         self._allowed_chars = allowed_chars
 
